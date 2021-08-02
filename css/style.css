@@ -1,0 +1,10 @@
+label {
+    width: auto;
+}
+
+input,
+select {
+    border: 1px solid #60C8DA !important;
+    border-radius: 6px;
+    width: 100%;
+}
