@@ -5,3 +5,11 @@ select {
     color: #60C8DA !important;
     font-weight: 700;
 }
+
+.t-line:nth-child(even) {
+    background: none;
+}
+
+.t-line:nth-child(odd) {
+    background: #ececec;
+}

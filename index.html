@@ -14,97 +14,179 @@
 <body>
     <header class="header modern-header-bg">
         <div class="container">
-            <h1 class="header__title">
+            <h1 class="header-title">
                 <a href="#"><i class="fas fa-calculator"></i> Calcudora de dosagem</a>
             </h1>
 
             <nav class="header-nav">
-                <a class="header-nav-link header-nav-link-user" href="#"><i class="fas fa-user"></i>Usuário logado</a>
+                <div class="dropdown">
+                    <a class="header-nav-link header-nav-link-user" href="#"><i class="fas fa-user"></i>Usuário logado</a>
+                    <ul class="dropdown-ul">
+                        <li class="dropdown-item">
+                            <a href="#"><i class="fas fa-cogs"></i> Configurações</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#"><i class="fas fa-sign-out-alt"></i>Logoff</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
 
     </header>
     <main class="main">
-        <div class="container">
-            <h2 class="t-center">Calculadora de dosagem</h2>
-            <div class="row">
-                <div class="col-75">
-                    <form class="form" action="">
-                        <div class="row my-5">
-                            <div class="col-100">
-                                <label for="cars">Selecione o medicamento:</label>
-                                <select class="my-3" name="medicamento" id="medicamento" required>
+        <section>
+            <div class="container">
+                <h2 class="t-center">Calculadora de dosagem</h2>
+                <div class="row">
+                    <div class="col-75">
+                        <form class="form" action="">
+                            <div class="row my-5">
+                                <div class="col-100">
+                                    <label for="cars">Selecione o medicamento:</label>
+                                    <select class="my-3" name="medicamento" id="medicamento" required>
                                     <option value="" selected></option>
                                     <option value="aciclovir">Aciclovir</option>
                                 </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row my-5">
-                            <div class="col-100">
-                                <label for="marca">Marcas disponíveis:</label>
-                                <select class="my-3" name="marca" id="marca" required>
+                            <div class="row my-5">
+                                <div class="col-100">
+                                    <label for="marca">Marcas disponíveis:</label>
+                                    <select class="my-3" name="marca" id="marca" required>
                                     <option value="" selected></option>
                                     <option value="zovirax">Zovirax – GSK</option>
                                     <option value="ezopen">Ezopen – Teuto Bras</option>
                                     <option value="aciclovir">Aciclovir – Teuto Bras</option>
                                     <option value="univir">Univir – União Química</option>
                                 </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row my-5">
-                            <div class="col-50">
-                                <label for="marca">Dosagem:</label>
-                                <select class="my-3" name="administracao" id="administracao" required>
+                            <div class="row my-5">
+                                <div class="col-50">
+                                    <label for="marca">Dosagem:</label>
+                                    <select class="my-3" name="administracao" id="administracao" required>
                                     <option value="" selected></option>
                                     <option value="zovirax">250mg</option>
                                     <option value="ezopen">500mg</option>
                                 </select>
-                            </div>
-                            <div class="col-50">
-                                <label for="marca">Administração:</label>
-                                <select class="my-3" name="administracao" id="administracao" required>
+                                </div>
+                                <div class="col-50">
+                                    <label for="marca">Administração:</label>
+                                    <select class="my-3" name="administracao" id="administracao" required>
                                     <option value="" selected></option>
                                     <option value="zovirax">Intravenoso</option>
                                     <option value="ezopen">Intramuscular</option>
                                 </select>
+                                </div>
+                            </div>
+                            <div class="row my-5">
+                                <div class="col-100">
+                                    <button type="submit" class="btn btn-main"> Calcular</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-25 order-offset">
+                        <div class="card my-3">
+                            <div class="card-header">
+                                <h3>Aplicações em andamento</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="info my-2">
+                                    <p>
+                                        Aciclovir – Teuto Bras 500mg, Intravenoso
+                                    </p>
+                                    <button type="button" class="close-info">X</button>
+                                </div>
+                                <div class="success my-2">
+                                    <p>
+                                        Mensagem de aplicação concluída
+                                    </p>
+                                    <button type="button" class="close-success">X</button>
+                                </div>
+                                <div class="attention my-2">
+                                    <p>
+                                        Uma mensagem um pouco mais longa sobre o procedimento que está por acabar.
+                                    </p>
+                                    <button type="button" class="close-attention">X</button>
+                                </div>
                             </div>
                         </div>
-                        <div class="row my-5">
-                            <div class="col-100">
-                                <button type="submit" class="btn btn-main"> Calcular</button>
+                        <div class="card my-3">
+                            <div class="card-header">
+                                <h3>Quadro de resultados</h3>
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-25">
-                    <div class="card my-3">
-                        <div class="card-header">
-                            <h3>Quadro de avisos</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="info my-2">
-                                <p>
-                                    Aciclovir – Teuto Bras 500mg, Intravenoso
-                                </p>
-                                <button type="button" class="btn-info">X</button>
-                            </div>
-                            <div class="alert my-2">
-                                <p>
-                                    Outra mensagem sobre o procedimento
-                                </p>
-                                <button type="button" class="btn-alert">X</button>
-                            </div>
-                            <div class="alert my-2">
-                                <p>
-                                    Uma mensagem um pouco mais longa sobre o procedimento, lorem impsum, lorem impsum, ,lorem impsum ,lorem impsum
-                                </p>
-                                <button type="button" class="btn-alert">X</button>
+                            <div class="card-body">
+                                <div class="info my-2">
+                                    <p>
+                                        Aciclovir – Teuto Bras 500mg, Intravenoso
+                                    </p>
+                                    <button type="button" class="close-info">X</button>
+                                </div>
+                                <div class="alert my-2">
+                                    <p>
+                                        Outra mensagem sobre o procedimento
+                                    </p>
+                                    <button type="button" class="close-alert">X</button>
+                                </div>
+                                <div class="alert my-2">
+                                    <p>
+                                        Uma mensagem um pouco mais longa sobre o procedimento, lorem impsum, lorem impsum, ,lorem impsum ,lorem impsum
+                                    </p>
+                                    <button type="button" class="close-alert">X</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2 class="t-center">Resultados</h2>
+                <div class="row">
+                    <div class="col-100">
+                        <table class="my-5">
+                            <tr>
+                                <th>Medicamento</th>
+                                <th>Dosagem</th>
+                                <th>Administração</th>
+                                <th>Aplicar</th>
+                                <th>Sobras</th>
+                                <th>Ações</th>
+                            </tr>
+                            <tr class="t-line">
+                                <td>Ezopen – Teuto Bras</td>
+                                <td>500mg</td>
+                                <td>Intravenosa</td>
+                                <td>5ml</td>
+                                <td>Descartar</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button class="btn-sm btn-danger">Cancelar</button>
+                                        <button class="btn-sm btn-success">Aplicar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="t-line">
+                                <td>Ezopen – Teuto Bras</td>
+                                <td>500mg</td>
+                                <td>Intramuscular</td>
+                                <td>2ml</td>
+                                <td>Descartar</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button class="btn-sm btn-danger">Cancelar</button>
+                                        <button class="btn-sm btn-success">Aplicar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">
