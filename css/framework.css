@@ -12,6 +12,69 @@ h5,
 h6,
 p {
     color: #2e2e2e;
+    word-break: normal;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form {
+    margin: 0 50px;
+    width: calc(100% - 50px);
+    height: auto;
+}
+
+input,
+select {
+    border: 1px solid #60C8DA !important;
+    border-radius: 6px;
+    width: 100%;
+    height: 35px;
+    transition: border 1s;
+}
+
+input:hover {
+    border: 3px solid #60C8DA !important;
+    border-radius: 6px;
+    width: 100%;
+    height: 35px;
+    transition: border 1s;
+}
+
+select:hover {
+    border: 3px solid #60C8DA !important;
+    border-radius: 6px;
+    width: 100%;
+    height: 35px;
+    transition: 1s;
+}
+
+input:active {
+    border: 3px solid #60C8DA !important;
+    border-radius: 6px;
+    width: 100%;
+    height: 35px;
+    transition: 1s;
+}
+
+select:active {
+    border: 3px solid #60C8DA !important;
+    border-radius: 6px;
+    width: 100%;
+    height: 35px;
+    transition: 1s;
 }
 
 
@@ -187,7 +250,18 @@ p {
     transition: .5s;
     display: block;
     border: 1px solid #60C8DA;
-    border-radius: 500px;
+    border-radius: 10px;
+}
+
+.header-nav-link-user:hover {
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #ffffff !important;
+    text-decoration: none;
+    transition: .5s;
+    display: block;
+    background: #60C8DA;
+    border: 1px solid #60C8DA;
 }
 
 .primary-header-bg {
@@ -249,6 +323,7 @@ p {
 
 .main .container {
     background: #ffffff;
+    padding-top: 25px;
 }
 
 .d-flex {
@@ -265,40 +340,121 @@ p {
 
 .row {
     display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-    height: auto;
+    width: auto;
 }
 
 .col-100 {
-    width: 100%;
+    width: calc(100% - 20px);
+    margin: auto;
     display: flex;
-    height: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .col-75 {
-    width: 50%;
+    width: calc(75% - 20px);
+    margin: auto;
     display: flex;
-    height: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .col-50 {
-    width: 50%;
+    width: calc(50% - 20px);
+    margin: auto;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     height: auto;
+    justify-content: space-around;
 }
 
 .col-25 {
-    width: 25%;
+    width: calc(25% - 20px);
+    margin: auto;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     height: auto;
+    justify-content: space-around;
 }
 
 .col-12 {
-    width: 12.5%;
+    width: calc(12.5% - 20px);
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     height: auto;
+    justify-content: space-around;
 }
+
+
+/*Cards*/
+
+.card {
+    display: grid;
+    grid-template-areas: "card-head" "card-body";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #60C8DA;
+    border-radius: 10px;
+}
+
+.card-header {
+    grid-area: card-head;
+    max-width: auto;
+    padding: .75rem;
+}
+
+.card-body {
+    grid-area: card-body;
+    padding: .75rem;
+}
+
+
+/*End Cards*/
+
+
+/*alert*/
+
+.alert {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #da8787;
+    border: 1px solid #772626;
+    width: 100%;
+    min-height: 30px;
+    border-radius: 8px;
+}
+
+.alert p {
+    font-size: 14px;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.btn-alert {
+    color: #2e2e2e;
+    font-size: 14px;
+    font-weight: 500;
+    background: none !important;
+    border: none !important;
+}
+
+
+/*end alert*/
 
 @media(max-width: 768px) {
     .header-nav {
@@ -309,17 +465,14 @@ p {
         align-items: initial;
         text-align: center;
     }
-    .header-nav-link-app {
-        order: -1;
-    }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
-    .col-100 {
+    .col-100,
+    .col-75 {
         width: 100%;
         height: auto;
     }
-    .col-75,
     .col-50,
     .col-25,
     .col-12 {

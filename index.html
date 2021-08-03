@@ -16,29 +16,65 @@
     <header class="header modern-header-bg">
         <div class="container">
             <h1 class="header__title">
-                <a href="#">Title</a>
+                <a href="#"><i class="fas fa-calculator"></i>Calcudora de dosagem</a>
             </h1>
 
             <nav class="header-nav">
-                <a class="header-nav-link" href="#"><i class="fas fa-user"></i>Usuário logado</a>
+                <a class="header-nav-link header-nav-link-user" href="#"><i class="fas fa-user"></i>Usuário logado</a>
             </nav>
         </div>
 
     </header>
     <main class="main">
         <div class="container">
+            <h2 class="t-center">Calculadora de dosagem</h2>
             <div class="row">
-                <form class="form" action="">
-                    <div class="d-flex">
-                        <label for="cars">Choose a car:</label>
-                        <select name="cars" id="cars">
-                                <option value="volvo">Volvo</option>
-                                <option value="saab">Saab</option>
-                                <option value="opel">Opel</option>
-                                <option value="audi">Audi</option>
+                <div class="col-75">
+                    <form class="form" action="">
+                        <div class="row my-5">
+                            <div class="col-100">
+                                <label for="cars">Selecione o medicamento:</label>
+                                <select name="medicamento" id="medicamento" required>
+                                    <option value="" selected></option>
+                                    <option value="aciclovir">Aciclovir</option>
                             </select>
+                            </div>
+                        </div>
+                        <div class="row my-5">
+                            <div class="col-100">
+                                <label for="marca">Marcas disponíveis:</label>
+                                <select name="marca" id="marca" required>
+                                    <option value="" selected></option>
+                                    <option value="zovirax">Zovirax – GSK</option>
+                                    <option value="ezopen">Ezopen – Teuto Bras</option>
+                                    <option value="aciclovir">Aciclovir – Teuto Bras</option>
+                                    <option value="univir">Univir – União Química</option>
+                            </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-25">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Quadro de avisos</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert my-2">
+                                <p>
+                                    Uma mensagem sobre o procedimento
+                                </p>
+                                <button type="button" class="btn-alert">X</button>
+                            </div>
+                            <div class="alert my-2">
+                                <p>
+                                    Outra mensagem sobre o procedimento
+                                </p>
+                                <button type="button" class="btn-alert">X</button>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </main>

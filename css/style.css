@@ -1,10 +1,7 @@
-label {
-    width: auto;
-}
-
-input,
+h2,
+h3,
+label,
 select {
-    border: 1px solid #60C8DA !important;
-    border-radius: 6px;
-    width: 100%;
+    color: #60C8DA !important;
+    font-weight: 700;
 }
