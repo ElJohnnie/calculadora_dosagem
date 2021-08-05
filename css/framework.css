@@ -637,7 +637,6 @@ select:focus {
     justify-content: space-between;
     align-items: center;
     background: #60C8DA;
-    border: 1px solid #336b75;
     width: 100%;
     min-height: 30px;
     border-radius: 8px;
@@ -662,7 +661,6 @@ select:focus {
     justify-content: space-between;
     align-items: center;
     background: #fac5c5;
-    border: 1px solid #772626;
     min-height: 30px;
     border-radius: 8px;
     padding-left: 3%;
@@ -689,7 +687,6 @@ select:focus {
     justify-content: space-between;
     align-items: center;
     background: #faf7c5;
-    border: 1px solid #c8a23a;
     min-height: 30px;
     border-radius: 8px;
     padding-left: 3%;
@@ -716,7 +713,6 @@ select:focus {
     justify-content: space-between;
     align-items: center;
     background: #61cc64;
-    border: 1px solid #177234;
     min-height: 30px;
     border-radius: 8px;
     padding-left: 3%;
