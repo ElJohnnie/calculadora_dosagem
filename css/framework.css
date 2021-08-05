@@ -636,7 +636,7 @@ select:focus {
 
 .info {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: #60C8DA;
     border: 1px solid #336b75;
@@ -661,13 +661,15 @@ select:focus {
 
 .alert {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: #fac5c5;
     border: 1px solid #772626;
-    width: 100%;
     min-height: 30px;
     border-radius: 8px;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: calc(100% - 6%);
 }
 
 .alert p {
@@ -686,13 +688,15 @@ select:focus {
 
 .attention {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: #faf7c5;
     border: 1px solid #c8a23a;
-    width: 100%;
     min-height: 30px;
     border-radius: 8px;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: calc(100% - 6%);
 }
 
 .attention p {
@@ -711,13 +715,15 @@ select:focus {
 
 .success {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: #61cc64;
     border: 1px solid #177234;
-    width: 100%;
     min-height: 30px;
     border-radius: 8px;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: calc(100% - 6%);
 }
 
 .success p {
@@ -826,7 +832,6 @@ td {
         font-size: 9px;
         padding: .1%;
     }
-    tr {}
     td {
         font-size: 9px;
         height: 54px;
