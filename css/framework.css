@@ -531,7 +531,6 @@ select:focus {
 .main .container {
     background: #ffffff;
     padding-top: 25px;
-    /*calc com o padding do header fixed*/
     height: auto;
 }
 
@@ -547,7 +546,6 @@ select:focus {
 
 .footer .container {
     background: #ffffff;
-    /*calc com o padding do header fixed*/
     height: auto;
 }
 
@@ -741,6 +739,9 @@ select:focus {
 }
 
 
+/*fim alert*/
+
+
 /*table*/
 
 table {
@@ -763,9 +764,6 @@ td {
 
 
 /*fim table*/
-
-
-/*fim alert*/
 
 @media(max-width: 768px) {
     .header-nav {

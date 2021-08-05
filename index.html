@@ -51,44 +51,48 @@
                                 <div class="col-100">
                                     <label for="medicamento">Selecione o medicamento:</label>
                                     <select class="my-3" name="medicamento" id="medicamento" required>
-                                    <option value="" selected></option>
-                                    <option value="aciclovir">Aciclovir</option>
-                                </select>
+                                        <option value="" selected></option>
+                                        <option value="aciclovir">Aciclovir</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row my-5">
                                 <div class="col-100">
                                     <label for="marca">Marcas disponíveis:</label>
                                     <select class="my-3" name="marca" id="marca" required>
-                                    <option value="" selected></option>
-                                    <option value="zovirax">Zovirax – GSK</option>
-                                    <option value="ezopen">Ezopen – Teuto Bras</option>
-                                    <option value="aciclovir">Aciclovir – Teuto Bras</option>
-                                    <option value="univir">Univir – União Química</option>
-                                </select>
+                                        <option value="" selected></option>
+                                        <option value="zovirax">Zovirax – GSK</option>
+                                        <option value="ezopen">Ezopen – Teuto Bras</option>
+                                        <option value="aciclovir">Aciclovir – Teuto Bras</option>
+                                        <option value="univir">Univir – União Química</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row my-5">
                                 <div class="col-50">
                                     <label for="dosagem">Dosagem:</label>
                                     <select class="my-3" name="dosagem" id="dosagem" required>
-                                    <option value="" selected></option>
-                                    <option value="zovirax">250mg</option>
-                                    <option value="ezopen">500mg</option>
-                                </select>
+                                        <option value="" selected></option>
+                                        <option value="zovirax">250mg</option>
+                                        <option value="ezopen">500mg</option>
+                                    </select>
                                 </div>
                                 <div class="col-50">
                                     <label for="marca">Administração:</label>
                                     <select class="my-3" name="administracao" id="administracao" required>
-                                    <option value="" selected></option>
-                                    <option value="zovirax">Intravenoso</option>
-                                    <option value="ezopen">Intramuscular</option>
-                                </select>
+                                        <option value="" selected></option>
+                                        <option value="zovirax">Intravenoso</option>
+                                        <option value="ezopen">Intramuscular</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row my-5">
-                                <div class="col-100">
-                                    <button type="submit" class="btn btn-main"> Calcular</button>
+                                <div class="col-50">
+                                    <label for="peso">Peso do paciente:</label>
+                                    <input class="my-3" id="peso" type="number" step="0.010">
+                                </div>
+                                <div class="col-50">
+                                    <button type="submit" class="btn btn-main my-3"> Calcular</button>
                                 </div>
                             </div>
                         </form>
@@ -206,6 +210,7 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/form.js"></script>
 </body>
 
 </html>

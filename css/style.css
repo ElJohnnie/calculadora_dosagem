@@ -1,7 +1,8 @@
 h2,
 h3,
 label,
-select {
+select,
+input {
     color: #60C8DA !important;
     font-weight: 700;
 }
