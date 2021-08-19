@@ -32,7 +32,6 @@
                 </div>
             </nav>
         </div>
-
     </header>
     <main class="main">
         <section>
@@ -40,13 +39,10 @@
                 <h2 class="t-center">Prescrição médica</h2>
                 <div class="row">
                     <div class="col-75">
-                        <div class="success">
-                            <p>
-                                Calculo efetuado com sucesso
-                            </p>
-                            <button type="button" class="close-success">X</button>
+                        <div class="alert-area invisible">
+
                         </div>
-                        <form class="form" action="">
+                        <form id="form" class="form">
                             <div class="row my-5">
                                 <div class="col-100">
                                     <label for="medicamento">Selecione o medicamento:</label>
@@ -73,23 +69,23 @@
                                     <label for="dosagem">Dosagem:</label>
                                     <select class="my-3" name="dosagem" id="dosagem" required>
                                         <option value="" selected></option>
-                                        <option value="zovirax">250mg</option>
-                                        <option value="ezopen">500mg</option>
+                                        <option value="250">250mg</option>
+                                        <option value="500">500mg</option>
                                     </select>
                                 </div>
                                 <div class="col-50">
                                     <label for="marca">Administração:</label>
                                     <select class="my-3" name="administracao" id="administracao" required>
                                         <option value="" selected></option>
-                                        <option value="zovirax">Intravenoso</option>
-                                        <option value="ezopen">Intramuscular</option>
+                                        <option value="Intravenoso">Intravenoso</option>
+                                        <option value="Intramuscular">Intramuscular</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row my-5">
                                 <div class="col-50">
                                     <label for="peso">Quantidade para administrar:</label>
-                                    <input class="my-3" id="ml" type="number" step="0.010">
+                                    <input class="my-3" id="ml" name="ml" type="number" step="0.010">
                                 </div>
                                 <div class="col-50">
                                     <button type="submit" class="btn btn-main my-3"> Calcular</button>
@@ -103,24 +99,7 @@
                                 <h3>Aplicações em andamento</h3>
                             </div>
                             <div class="card-body">
-                                <div class="info my-2">
-                                    <p>
-                                        Aciclovir – Teuto Bras 500mg, Intravenoso
-                                    </p>
-                                    <button type="button" class="close-info">X</button>
-                                </div>
-                                <div class="success my-2">
-                                    <p>
-                                        Mensagem de aplicação concluída
-                                    </p>
-                                    <button type="button" class="close-success">X</button>
-                                </div>
-                                <div class="attention my-2">
-                                    <p>
-                                        Uma mensagem um pouco mais longa sobre o procedimento que está por acabar.
-                                    </p>
-                                    <button type="button" class="close-attention">X</button>
-                                </div>
+
                             </div>
                         </div>
                         <div class="card my-3">
@@ -128,24 +107,7 @@
                                 <h3>Quadro de resultados</h3>
                             </div>
                             <div class="card-body">
-                                <div class="info my-2">
-                                    <p>
-                                        Aciclovir – Teuto Bras 500mg, Intravenoso
-                                    </p>
-                                    <button type="button" class="close-info">X</button>
-                                </div>
-                                <div class="alert my-2">
-                                    <p>
-                                        Outra mensagem sobre o procedimento
-                                    </p>
-                                    <button type="button" class="close-alert">X</button>
-                                </div>
-                                <div class="alert my-2">
-                                    <p>
-                                        Uma mensagem um pouco mais longa sobre o procedimento, lorem impsum, lorem impsum, ,lorem impsum ,lorem impsum
-                                    </p>
-                                    <button type="button" class="close-alert">X</button>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -157,7 +119,7 @@
                 <h2 class="t-center">Resultados</h2>
                 <div class="row">
                     <div class="col-100">
-                        <table class="my-5">
+                        <table id="resultado" class="my-5">
                             <tr>
                                 <th>Medicamento</th>
                                 <th>Diluição</th>
@@ -166,34 +128,6 @@
                                 <th>Tempo de aplicação</th>
                                 <th>Sobras</th>
                                 <th>Ações</th>
-                            </tr>
-                            <tr class="t-line">
-                                <td>Ezopen – Teuto Bras 500mg</td>
-                                <td>IV direto 2ml AD</td>
-                                <td>Aspirar 1 frasco + 18 ml SF = 25 mg/ml</td>
-                                <td>2ml</td>
-                                <td>15 minutos</td>
-                                <td>Descartar</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button class="btn-sm btn-danger">Cancelar</button>
-                                        <button class="btn-sm btn-success">Aplicar</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="t-line">
-                                <td>Ezopen – Teuto Bras - 500mg</td>
-                                <td>IV direto 2ml AD</td>
-                                <td>Aspirar 1 frasco + 18 ml SF = 25 mg/ml</td>
-                                <td>2ml</td>
-                                <td>15 minutos</td>
-                                <td>Descartar</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button class="btn-sm btn-danger">Cancelar</button>
-                                        <button class="btn-sm btn-success">Aplicar</button>
-                                    </div>
-                                </td>
                             </tr>
                         </table>
                     </div>
@@ -210,6 +144,8 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/form.js"></script>
     <script src="scripts/form.js"></script>
 </body>
 
