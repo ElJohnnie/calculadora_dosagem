@@ -20,7 +20,7 @@ function criarTr(inputs) {
     resultadoTr.appendChild(criarTd(inputs.administracao));
     resultadoTr.appendChild(criarTd("60 minutos"));
     resultadoTr.appendChild(criarTd("Descartar"));
-    resultadoTr.appendChild(criarTd("Teste"));
+    resultadoTr.appendChild(criarTdBotoes());
 
     return resultadoTr;
 
@@ -31,6 +31,15 @@ function criarTd(dado) {
     td.textContent = dado;
 
     return td;
+}
+
+function criarTdBotoes() {
+    var acoes = document.createElement("div");
+    acoes.classList.add("btn-group");
+    acoes.innerHTML = `<button class="btn-sm btn-danger">Cancelar</button>
+    <button class="btn-sm btn-success">Aplicar</button>`;
+    console.log(acoes);
+    return acoes;
 }
 
 export default calcular;
