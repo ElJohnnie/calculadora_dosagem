@@ -1,20 +1,17 @@
-function calcular(inputs) {
+export default function calcular(inputs) {
 
+    console.log(inputs);
     return criarTr(inputs);
 
 }
 
 function criarTr(inputs) {
+    var table = document.querySelector('#resultado');
     var resultadoTr = document.createElement("tr");
     resultadoTr.classList.add("t-line");
 
-    var acoes = document.createElement("div");
-    acoes.classList.add("btn-group");
-    var acoesbtns = acoes.innerHTML = `<button class="btn-sm btn-danger">Cancelar</button>
-    <button class="btn-sm btn-success">Aplicar</button>`;
 
-
-    resultadoTr.appendChild(criarTd(inputs.medicamento));
+    resultadoTr.appendChild(criarTd(inputs.medicamentos));
     resultadoTr.appendChild(criarTd("Teste"));
     resultadoTr.appendChild(criarTd("Teste"));
     resultadoTr.appendChild(criarTd(inputs.administracao));
@@ -22,7 +19,7 @@ function criarTr(inputs) {
     resultadoTr.appendChild(criarTd("Descartar"));
     resultadoTr.appendChild(criarTdBotoes());
 
-    return resultadoTr;
+    return table.appendChild(resultadoTr);
 
 }
 
@@ -38,8 +35,5 @@ function criarTdBotoes() {
     acoes.classList.add("btn-group");
     acoes.innerHTML = `<button class="btn-sm btn-danger">Cancelar</button>
     <button class="btn-sm btn-success">Aplicar</button>`;
-    console.log(acoes);
     return acoes;
 }
-
-export default calcular;
