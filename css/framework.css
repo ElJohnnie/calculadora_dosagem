@@ -4,7 +4,7 @@ body {
 }
 
 .invisible {
-    display: none;
+    display: none !important;
 }
 
 .d-flex {
@@ -415,18 +415,6 @@ select:focus {
     border-radius: 10px;
 }
 
-.header-nav-link-user:hover {
-    padding: 10px;
-    margin-bottom: 10px;
-    color: #ffffff !important;
-    text-decoration: none;
-    transition: .5s;
-    display: block;
-    background: #60C8DA;
-    border: 1px solid #60C8DA;
-    border-radius: 10px;
-}
-
 
 /*dropdown*/
 
@@ -636,6 +624,10 @@ select:focus {
 
 /*alerts*/
 
+.alert-area {
+    width: 100%;
+}
+
 .info {
     display: flex;
     justify-content: space-between;
@@ -787,8 +779,6 @@ td {
     }
     /*fim table*/
 }
-
-@media (min-width: 781px) and (max-width: 1024px) {}
 
 @media (min-width: 480px) and (max-width: 780px) {
     .col-100,

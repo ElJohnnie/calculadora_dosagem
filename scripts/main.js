@@ -1,19 +1,28 @@
 import consumirApi from './componentes/api.js';
-import popularSelect from './componentes/form.js';
-import calcular from './componentes/table.js';
+import popularSelect from './componentes/formulario.js';
+import calcular from './componentes/tabela.js';
 
-let medicamentos = await consumirApi('https://611e96c49771bf001785c54d.mockapi.io/api/v1/medicamentos');
-let marcas = await consumirApi('https://611e96c49771bf001785c54d.mockapi.io/api/v1/marcas');
+var medicamentos = await consumirApi('https://611e96c49771bf001785c54d.mockapi.io/api/v1/medicamentos');
+var marcas = await consumirApi('https://611e96c49771bf001785c54d.mockapi.io/api/v1/marcas');
 
-popularSelect(medicamentos, '#medicamento');
-popularSelect(marcas, '#marca');
+(popularSelect(medicamentos, '#medicamento'));
+(popularSelect(marcas, '#marca'));
 
-document.querySelector('#form').addEventListener('submit', () => {
+(document.querySelector('#form').addEventListener('submit', () => {
     event.preventDefault();
-    var medicamento = document.querySelector('#medicamento');
     var inputs = {
-        medicamentos: medicamento.options[medicamento.selectedIndex].text,
+        medicamentos: document.querySelector('#medicamento').options[document.querySelector('#medicamento').selectedIndex].text,
         administracao: document.querySelector('#administracao').value
     }
-    calcular(inputs);
-})
+    if (calcular(inputs)) {
+        document.querySelector(".success").classList.remove("invisible");
+        setTimeout(function() {
+            document.querySelector(".success").classList.add("invisible")
+        }, 5000);
+    } else {
+        document.querySelector(".alert").classList.remove("invisible");
+        setTimeout(function() {
+            document.querySelector(".alert").classList.add("invisible")
+        }, 5000);
+    };
+}));

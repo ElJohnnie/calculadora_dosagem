@@ -1,9 +1,13 @@
 h2,
 h3,
-label,
+label {
+    color: #60C8DA !important;
+    font-weight: 700;
+}
+
 select,
 input {
-    color: #60C8DA !important;
+    color: #3d7a85 !important;
     font-weight: 700;
 }
 
